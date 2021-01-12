@@ -1,6 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
-import classNames from "classnames";
+// import classNames from "classnames";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -11,19 +11,19 @@ import componentsStyle from "assets/jss/material-kit-pro-react/views/presentatio
 // import cardsStyle from "assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-import cardsTest from "assets/img/assets-for-demo/test1.jpg";
+// import cardsTest from "assets/img/assets-for-demo/test1.jpg";
 import ImageUpload from 'components/CustomUpload/ImageUpload.js';
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
 
-const style = {
-  ...imagesStyles,
-  cardTitle,
-  textMuted: {
-    color: "#6c757d"
-  }
-};
+// const style = {
+//   ...imagesStyles,
+//   cardTitle,
+//   textMuted: {
+//     color: "#6c757d"
+//   }
+// };
 
 // const useStyles = makeStyles(style);
 
