@@ -6,42 +6,66 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import componentsStyle from "assets/jss/material-kit-pro-react/views/presentationSections/componentsStyle.js";
 
-import cardsStyle from "assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js";
+// import cardsStyle from "assets/jss/material-kit-pro-react/views/presentationSections/cardsStyle.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import cardsTest from "assets/img/assets-for-demo/test1.jpg";
+import ImageUpload from 'components/CustomUpload/ImageUpload.js';
+import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
+import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
-import cardsTest from "assets/img/assets-for-demo/cards-test.png";
 
-const useStyles = makeStyles(cardsStyle);
+const style = {
+  ...imagesStyles,
+  cardTitle,
+  textMuted: {
+    color: "#6c757d"
+  }
+};
+
+// const useStyles = makeStyles(style);
+
+const useStyles = makeStyles(componentsStyle);
+
+
 
 export default function SectionCards() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section, classes.sectionDark)}>
-      <div className={classes.container}>
-        <GridContainer justify="center">
-          <GridItem md={7} sm={7}>
-            <div className={classes.imageContainer}>
-              <img src={cardsTest} alt="views" />
-            </div>
-          </GridItem>
-          <GridItem md={4} sm={5} className={classes.mlAuto}>
-            <div className={classes.sectionDescription}>
-              <h3 className={classes.title}>Unconventional Cards</h3>
-              <h6 className={classes.description}>
-                One Card for Every Problem
-              </h6>
-              <h5 className={classes.description}>
-                We love cards and everybody on the web seems to. We have gone
-                above and beyond with options for you to organise your
-                information. From cards designed for blog posts, to product
-                cards or user profiles, you will have many options to choose
-                from. All the cards follow the material principles and have a
-                design that stands out.
-              </h5>
-            </div>
-          </GridItem>
-        </GridContainer>
-      </div>
+    <div className={classes.container}>
+
+      <GridContainer justify="center">
+        <GridItem md={5} lg={5} sm={12} xs={12}>
+          <div >
+            <ImageUpload />
+          </div>
+        </GridItem>
+        <GridItem md={5} lg={5} sm={12} xs={12}>
+          <div>
+            <Card>
+              <img
+                style={{ height: "180px", width: "100%", display: "block" }}
+                className={classes.imgCardTop}
+                src="http://via.placeholder.com/640x360"
+                alt="Card-img-cap"
+              />
+              <CardBody>
+                <h4 className={classes.cardTitle}>Card title</h4>
+                <p>
+                  This is a wider card with supporting text below as a natural lead-in
+                  to additional content. This content is a little bit longer.
+          </p>
+                <p>
+                  <small className={classes.textMuted}>Last updated 3 mins ago</small>
+                </p>
+              </CardBody>
+            </Card>
+          </div>
+        </GridItem>
+      </GridContainer>
+
     </div>
   );
 }
