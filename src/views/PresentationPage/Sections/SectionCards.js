@@ -13,8 +13,8 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 // import cardsTest from "assets/img/assets-for-demo/test1.jpg";
 import ImageUpload from 'components/CustomUpload/ImageUpload.js';
-import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
-import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+// import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
+// import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
 
 // const style = {
